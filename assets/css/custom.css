@@ -1,0 +1,10 @@
+/*
+Custom Css
+*/
+.img-fluid {
+    height:80%;
+}
+
+.carousel-item {
+    height: 300px;
+}

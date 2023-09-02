@@ -1,0 +1,254 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMst.master.cs" Inherits="J_J_Master_and_Bag_House.MainMst" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <title>J.J Master & Bag House</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/JJMaster.ico" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/templatemo.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+            <div class="container text-light">
+                <div class="w-100 d-flex justify-content-between">
+                    <div>
+                        <i class="fa fa-envelope mx-2"></i>
+                        <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:jjmaster@gmail.com">jjmaster@gmail.com</a>
+                        <i class="fa fa-phone mx-2"></i>
+                        <a class="navbar-sm-brand text-light text-decoration-none" href="tel:99048 53132">+91 99048 53132</a>
+                    </div>
+                    <div>
+                        <a class="text-light" href="https://www.facebook.com/jay.bhadreshwara.4/" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                        <a class="text-light" href="https://www.instagram.com/jay.__.2000/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                        <a class="text-light" href="https://twitter.com/bhadreshwara_j" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                        <a class="text-light" href="https://www.linkedin.com/in/jay-bhadreshwara-6a90a716a/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Close Top Nav -->
+
+
+        <!-- Header -->
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container d-flex justify-content-between align-items-center">
+                <%--<img class="img-fluid" src="./assets/img/apple-icon.png" alt="">--%>
+                <a class="navbar-brand text-success logo h1 align-self-center" href="Default.aspx">J.J Master</a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                    <div class="flex-fill">
+                        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Default.aspx">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.aspx">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop.aspx">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop-single.aspx">Shop-single</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.aspx">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.aspx">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar align-self-center d-flex">
+                        <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                                <div class="input-group-text">
+                                    <i class="fa fa-fw fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                            <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                        </a>
+                        <a class="nav-icon position-relative text-decoration-none" href="#">
+                            <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                            <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        </a>
+                        <a class="nav-icon position-relative text-decoration-none" href="#">
+                            <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                            <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Close Header -->
+
+        <!-- Modal -->
+        <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="w-100 pt-1 mb-5 text-right">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                        <button type="submit" class="input-group-text bg-success text-light">
+                            <i class="fa fa-fw fa-search text-white"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+        <!-- Start Footer -->
+        <footer class="bg-dark" id="tempaltemo_footer">
+            <div class="container">
+                <div class="col-pt-6 pt-3">
+                    <div class="row">
+                        <div class="col-pt-4 pt-1">
+                            <h2 class="h2 text-success border-bottom pb-3 border-light logo">J.J Master & Bag House</h2>
+                        </div>
+                        <div class="col-md-4 pt-1">
+                            <div class="col-pt-1">
+                                <h2 class="h2 text-light border-bottom pb-3 border-light">Address</h2>
+                                <ul class="list-unstyled text-light footer-link-list">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                                        Shop No 33, Savita Park, Jain Derasar Road, Isanpur, Ahmedabad - 382443 (Near Lotus School)
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone fa-fw"></i>
+                                        <a class="text-decoration-none" href="tel:+91 99048 53132">+91 99048 53132</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope fa-fw"></i>
+                                        <a class="text-decoration-none" href="mailto:jjmaster@gmail.com">jjmaster@gmail.com </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 pt-1">
+                            <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                            <ul class="list-unstyled text-light footer-link-list">
+                                <li><a class="text-decoration-none" href="#">School Bags</a></li>
+                                <li><a class="text-decoration-none" href="#">Laptop Bags</a></li>
+                                <li><a class="text-decoration-none" href="#">Tution Bags</a></li>
+                                <li><a class="text-decoration-none" href="#">Travel Bags</a></li>
+                                <li><a class="text-decoration-none" href="#">Trolley Bags</a></li>
+                                <li><a class="text-decoration-none" href="#">Duffle Bag</a></li>
+                                <li><a class="text-decoration-none" href="#">Handbag</a></li>
+                                <li><a class="text-decoration-none" href="#">Gym Bags</a></li>
+                                <li><a class="text-decoration-none" href="#">Fancy Bags</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="col-md-2 pt-1">
+                            <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                            <ul class="list-unstyled text-light footer-link-list">
+                                <li><a class="text-decoration-none" href="#">Home</a></li>
+                                <li><a class="text-decoration-none" href="#">About Us</a></li>
+                                <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
+                                <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                                <li><a class="text-decoration-none" href="#">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 pt-1">
+                            <h2 class="h2 text-light border-bottom pb-3 border-light">Policies</h2>
+                            <ul class="list-unstyled text-light footer-link-list">
+                                <li><a class="text-decoration-none" href="#">Privacy Policy</a></li>
+                                <li><a class="text-decoration-none" href="#">Return Refund-Policy</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="row text-light mb-4">
+                        <div class="col-12 mb-3">
+                            <div class="w-100 my-3 border-top border-light"></div>
+                        </div>
+                        <div class="col-auto me-auto">
+                            <ul class="list-inline text-left footer-icons">
+                                <li class="list-inline-item border border-light rounded-circle text-center">
+                                    <a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/jay.bhadreshwara.4/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                                </li>
+                                <li class="list-inline-item border border-light rounded-circle text-center">
+                                    <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/jay.__.2000/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                                </li>
+                                <li class="list-inline-item border border-light rounded-circle text-center">
+                                    <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/bhadreshwara_j"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                                </li>
+                                <li class="list-inline-item border border-light rounded-circle text-center">
+                                    <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/jay-bhadreshwara-6a90a716a/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-auto">
+                            <label class="sr-only" for="subscribeEmail">Email address</label>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                                <div class="input-group-text btn-success text-light">Subscribe</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 bg-black py-3">
+                    <div class="container">
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <p class="text-left text-light">
+                                    Copyright &copy; 1999 J.J Master 
+                            | Designed by <a rel="sponsored" href="jaycv.000webhostapp.com" target="_blank">Jay Bhadreshwara</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+        <!-- End Footer -->
+
+        <!-- Start Script -->
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/templatemo.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <!-- Start Top Nav -->
+        <%--<script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            }
+</script>--%>
+        <!-- End Script -->
+
+    </form>
+</body>
+</html>
